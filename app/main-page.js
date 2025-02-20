@@ -1,6 +1,17 @@
-import { createViewModel } from './main-view-model';
+const { Frame } = require("@nativescript/core");
 
-export function onNavigatingTo(args) {
-  const page = args.object
-  page.bindingContext = createViewModel()
+function goToDiscover() {
+  Frame.topmost().navigate("discover-page");
 }
+
+function goToFavorite() {
+  Frame.topmost().navigate("favorite-page");
+}
+
+function goToSettings() {
+  Frame.topmost().navigate("settings-page");
+}
+
+exports.goToDiscover = goToDiscover;
+exports.goToFavorite = goToFavorite;
+exports.goToSettings = goToSettings;

@@ -1,6 +1,27 @@
-﻿@import '@nativescript/theme/css/core.css';
-@import '@nativescript/theme/css/default.css';
+﻿/* Default Light Mode */
+Page {
+    background-color: white;
+    color: black;
+}
 
-Button.-primary {
-  font-size: 18;
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Buttons */
+Button, Switch {
+    font-size: 20px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #007bff76;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+/* Dark Mode Buttons */
+.dark-mode Button, .dark-mode Switch {
+    background-color: #333 !important;
+    color: white !important;
 }

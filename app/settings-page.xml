@@ -1,0 +1,9 @@
+<Page navigatingTo="onNavigatingTo">
+    <ActionBar title="Settings">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack"/>
+    </ActionBar>
+    <StackLayout class="settings-container">
+        <Label text="Dark Mode" fontSize="20"/>
+        <Switch checked="{{ isDarkMode }}" tap="toggleTheme"/>
+    </StackLayout>
+</Page>

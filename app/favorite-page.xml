@@ -1,0 +1,21 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Favorite Songs">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack"/>
+    </ActionBar>
+    <GridLayout rows="auto, *" class="p-20">
+        <Label text="Your Favorite Songs" fontSize="20" row="0" />
+        
+        <!-- Set ListView height to take remaining screen space -->
+        <ListView items="{{ favoriteSongs }}" separatorColor="gray" row="1" height="80%">
+            <ListView.itemTemplate>
+                <GridLayout columns="*, auto">
+                    <StackLayout col="0">
+                        <Label text="{{ title }}" fontSize="18" />
+                        <Label text="{{ artist }}" fontSize="14" color="gray" />
+                    </StackLayout>
+                    <Button text="❌" col="1" tap="{{ removeFromFavorites }}" class="btn btn-danger"/>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

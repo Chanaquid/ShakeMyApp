@@ -1,9 +1,8 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-    <ActionBar title="My App" icon="" />
-
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar title="Shake to Shuffel" />
     <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center" />
-        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
+        <Button text="Discover" tap="goToDiscover" class="btn btn-primary m-10"/>
+        <Button text="Favorite" tap="goToFavorite" class="btn btn-primary m-10"/>
+        <Button text="Settings" tap="goToSettings" class="btn btn-primary m-10"/>
     </StackLayout>
 </Page>

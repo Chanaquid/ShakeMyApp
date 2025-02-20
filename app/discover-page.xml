@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Discover">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack"/>
+    </ActionBar>
+    <StackLayout class="p-20">
+        <Button text="Get Random Song" tap="fetchRandomSong" class="btn btn-primary m-10"/>
+    </StackLayout>
+</Page>

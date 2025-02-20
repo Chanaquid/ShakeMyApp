@@ -1,14 +1,16 @@
-/*
-In NativeScript, the app.js file is the entry point to your application.
-You can use this file to perform app-level initialization, but the primary
-purpose of the file is to pass control to the app’s first module.
-*/
+const { Application, ApplicationSettings } = require("@nativescript/core");
 
-import { Application } from '@nativescript/core';
+Application.on(Application.launchEvent, () => {
+  applyTheme(); // Apply theme when the app launches
+});
 
-Application.run({ moduleName: 'app-root' })
+function applyTheme() {
+  const isDarkMode = ApplicationSettings.getBoolean("darkMode", false);
+  const rootView = Application.getRootView();
 
-/*
-Do not place any code after the application has been started as it will not
-be executed on iOS.
-*/
+  if (rootView) {
+    rootView.className = isDarkMode ? "dark-mode" : "";
+  }
+}
+
+Application.run({ moduleName: "app-root" });
