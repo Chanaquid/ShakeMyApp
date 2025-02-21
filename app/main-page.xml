@@ -1,8 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd">
-    <ActionBar title="Shake to Shuffel" />
-    <StackLayout class="p-20">
-        <Button text="Discover" tap="goToDiscover" class="btn btn-primary m-10"/>
-        <Button text="Favorite" tap="goToFavorite" class="btn btn-primary m-10"/>
-        <Button text="Settings" tap="goToSettings" class="btn btn-primary m-10"/>
-    </StackLayout>
+    <ActionBar title="SHAKE MY APP 💃🏽" fontSize="24" horizontalAlignment='center' />
+    
+    <GridLayout rows="*, auto, *" columns="*" class="p-20">
+        <StackLayout row="1" horizontalAlignment="center">
+            <Button text="Discover" tap="goToDiscover" class="btn btn-primary m-20" width="350" height="80" fontSize="24" padding="15"/>
+            <Button text="Favorite" tap="goToFavorite" class="btn btn-primary m-20" width="350" height="80" fontSize="24" padding="15"/>
+            <Button text="Settings" tap="goToSettings" class="btn btn-primary m-20" width="350" height="80" fontSize="24" padding="15"/>
+        </StackLayout>
+    </GridLayout>
 </Page>

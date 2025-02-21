@@ -1,27 +1,50 @@
-﻿/* Default Light Mode */
-Page {
-    background-color: white;
-    color: black;
+﻿/* Light Mode */
+.light-mode Page {
+  background-color: white;
+  color: black;
 }
 
 /* Dark Mode */
-.dark-mode {
-    background-color: black;
-    color: white;
+.dark-mode Page {
+  background-color: #121212;
+  color: white;
 }
 
-/* Buttons */
-Button, Switch {
+/* Action Bar */
+.dark-mode ActionBar {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Labels (Ensures text changes in Dark Mode) */
+Label {
+    font-size: 18px;
+    color: black;
+}
+
+/* Dark Mode Labels */
+.dark-mode Label {
+    color: white !important;
+}
+
+/* Theme Toggle Button */
+.theme-button {
     font-size: 20px;
-    margin: 10px;
     padding: 15px;
-    background-color: #007bff76;
-    color: rgb(0, 0, 0);
-    border-radius: 20px;
+    margin-top: 10px;
+    width: 200px;
+    background-color: #007AFF;
+    color: white;
+    border-radius: 10px;
 }
 
-/* Dark Mode Buttons */
-.dark-mode Button, .dark-mode Switch {
+/* Dark Mode Button */
+.dark-mode .theme-button {
     background-color: #333 !important;
+    color: white !important;
+}
+
+/* Dark Mode Settings Title */
+.dark-mode .dark-mode-label {
     color: white !important;
 }

@@ -1,8 +1,16 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+<Page navigatingTo="onNavigatingTo" navigatingFrom="onNavigatingFrom">
     <ActionBar title="Discover">
         <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack"/>
     </ActionBar>
-    <StackLayout class="p-20">
-        <Button text="Get Random Song" tap="fetchRandomSong" class="btn btn-primary m-10"/>
-    </StackLayout>
+
+    <!-- GridLayout for centering content -->
+    <GridLayout rows="*, auto, *" columns="*" class="p-20">
+        <StackLayout row="1" horizontalAlignment="center">
+            <!-- Music Icon -->
+            <Label text="🎵🎶🎸" fontSize="100" textAlignment="center" />
+            <Label text="Shake your phone to get a song!" fontSize="22" textAlignment="center" fontWeight="bold" marginBottom="10" />
+            <Label text="Discover random songs by shaking your phone" fontSize="16" textAlignment="center" color="gray" />
+            <Label text="⬅️📱➡️" fontSize="45" textAlignment="center" marginTop="20" />
+        </StackLayout>
+    </GridLayout>
 </Page>

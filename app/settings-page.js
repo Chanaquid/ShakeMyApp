@@ -11,14 +11,13 @@ function onNavigatingTo(args) {
   };
 }
 
-function toggleTheme(args) {
-  const switchButton = args.object;
-  const isDarkMode = switchButton.checked; // Get the new state of the switch
+function toggleTheme() {
+  const isDarkMode = ApplicationSettings.getBoolean("darkMode", false);
 
-  // Save the theme preference
-  ApplicationSettings.setBoolean("darkMode", isDarkMode);
+  // Toggle theme
+  ApplicationSettings.setBoolean("darkMode", !isDarkMode);
 
-  // Apply the theme immediately
+  // Apply the new theme immediately
   applyTheme();
 }
 
@@ -27,7 +26,7 @@ function applyTheme() {
   const rootView = Application.getRootView();
 
   if (rootView) {
-    rootView.className = isDarkMode ? "dark-mode" : "";
+    rootView.className = isDarkMode ? "dark-mode" : "light-mode";
   }
 }
 
@@ -38,3 +37,6 @@ function goBack() {
 exports.onNavigatingTo = onNavigatingTo;
 exports.toggleTheme = toggleTheme;
 exports.goBack = goBack;
+
+// Apply theme on app startup
+applyTheme();

@@ -2,8 +2,10 @@
     <ActionBar title="Settings">
         <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="goBack"/>
     </ActionBar>
-    <StackLayout class="settings-container">
-        <Label text="Dark Mode" fontSize="20"/>
-        <Switch checked="{{ isDarkMode }}" tap="toggleTheme"/>
-    </StackLayout>
+    <GridLayout rows="*, auto, *" columns="*" class="settings-container">
+        <StackLayout row="1" horizontalAlignment="center">
+            <Label text="Dark Mode" fontSize="22" fontWeight="bold" class="dark-mode-label" textAlignment="center" marginBottom="10"/>
+            <Button text="On" tap="toggleTheme" class="btn btn-primary theme-button"/>
+        </StackLayout>
+    </GridLayout>
 </Page>
